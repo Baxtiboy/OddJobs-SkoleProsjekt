@@ -1,0 +1,54 @@
+[
+    {
+        "title": "Window Washing",
+        "description": "I will come and wash your windows.",
+        "owner": "John Doe",
+        "img": "/public/images/window-washing.jpg",
+        "worker_amount": 32,
+        "price": 25,
+        "likes": 126,
+        "purchases": 1034,
+        "date": 20251113,
+        "url": "window-washing",
+        "id": 1
+    },
+    {
+        "title": "Taxi Driver",
+        "description": "I will take you anywhere!",
+        "owner": "Barry Alan",
+        "img": "/public/images/taxi-driver.jpg",
+        "worker_amount": 34,
+        "price": 40,
+        "likes": 190,
+        "purchases": 2364,
+        "date": 20250430,
+        "url": "taxi-driver",
+        "id": 2
+    },
+    {
+        "title": "Window Washing",
+        "description": "I will come and wash your windows.",
+        "owner": "John Doe",
+        "img": "/public/images/window-washing.jpg",
+        "worker_amount": 7,
+        "price": 25,
+        "likes": 107,
+        "purchases": 1034,
+        "date": 20240813,
+        "url": "window-washing",
+        "id": 3
+    },
+    {
+        "title": "Window Washing",
+        "description": "I will come and wash your windows.",
+        "owner": "Daniel Matheo Øvereng Jacobsen",
+        "img": "/public/images/window-washing.jpg",
+        "worker_amount": 3,
+        "price": 25,
+        "likes": 87,
+        "purchases": 1034,
+        "date": 20260114,
+        "url": "window-washing",
+        "id": 4
+    }
+]

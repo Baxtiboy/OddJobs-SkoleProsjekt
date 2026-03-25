@@ -1,0 +1,16 @@
+* {
+  font-family:sans-serif;
+  color: white;
+
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  background: none;
+}
+
+body {
+  background-color: rgb(41, 37, 44);
+  padding-top: 69px;
+}

@@ -1,0 +1,121 @@
+.header-body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+
+    background-color: rgb(20, 18, 22);
+    width: 100%;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1100px;
+
+    z-index: 100;
+}
+
+.account-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    padding: 1rem;
+    width: 100%;
+}
+
+.account-header section {
+    display: flex;
+    gap: 1rem;
+}
+
+.logo {
+    margin-left: 1rem;
+    cursor: pointer
+}
+
+.logo h1 {
+    color: rgba(255, 255, 255, 0.461);
+    align-self: center;
+    vertical-align: middle;
+}
+
+.nav-btn {
+    font-weight: 600;
+    font-size: 1rem;
+
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+
+    box-sizing: content-box;
+    border: 1px solid rgba(255, 255, 255, 0);
+
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    transform: scale(1.05);
+}
+
+.green:hover {
+    color: rgb(0, 255, 0);
+
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1100px;
+
+    background-color: rgb(29, 26, 32);
+}
+
+.page-link {
+    flex: 1;
+    text-align: center;
+
+    background-color: rgb(29, 26, 32);
+    border-bottom: 2px solid rgba(55, 49, 59, 0);
+    padding: 0.5rem;
+
+    transition: 0.1s;
+}
+
+.page-link:hover {
+    background-color: rgb(36, 32, 39);
+    border-bottom: 2px solid rgb(55, 49, 59);
+}
+
+.page-link.active {
+    background-color: rgb(41, 37, 44);
+    border-bottom: 2px solid rgb(55, 49, 59, 0);
+}
+
+@media (max-width: 500px) {
+    .account-header {
+        padding: 1rem 0.8rem
+    }
+
+    .nav-btn {
+        font-size: smaller;
+        padding: 0.2rem 0.4rem;
+        align-content: center;
+    }
+}

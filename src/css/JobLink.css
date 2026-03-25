@@ -1,0 +1,126 @@
+.job-container {
+    position: relative;
+    display: grid;
+    grid-template-rows: 10rem auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 25rem;
+    
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+    
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+.job-container:hover .like-btn {
+    opacity: 1;
+}
+
+.like-btn {
+    opacity: 0;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    height: 2.5rem; width: 2.5rem;
+    font-size: large;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+
+    z-index: 2;
+    transition: 0.2s;
+}
+.like-btn:hover {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.like-btn.liked {
+    color: rgb(255, 75, 75);
+}
+
+.job-img-container {
+    position: relative;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px 8px 0 0;
+}
+
+.job-img {
+    object-fit: cover;
+    width: 100%; 
+    height: 100%;
+
+    border-radius: 8px 8px 0 0;
+}
+
+.overlapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    opacity: 0;
+
+    transition: 0.5s ease-out;
+}
+.job-container:hover .overlapper {
+    opacity: 1;
+}
+
+.job-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.5rem;
+    background-color: rgb(41, 37, 44);
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    margin-top: -8px;
+
+    z-index: 1;
+
+    transition: 0.5s ease-out;
+}
+.job-container:hover .job-info {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.job-title {
+    font-size: medium;
+}
+
+.job-description {
+    font-size: small;
+    margin-bottom: 0.2rem;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.5rem;
+}
+
+.stats-container label {
+    height: 100%;
+    font-size: 0.8rem;
+}
+
+.price-stat {
+    color: rgb(0, 255, 0);
+}
+
+.colored-symbol {
+    color: #ffffff;
+    font-size: smaller
+}
