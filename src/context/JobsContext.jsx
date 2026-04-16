@@ -12,12 +12,10 @@ const JobsProvider = ({children}) => {
         const storedFavs = localStorage.getItem("likedJobs")
         
         if (storedFavs) setLikedJobs(JSON.parse(storedFavs))
-        console.log(storedFavs)
     }, [])
 
     useEffect(() => {
         localStorage.setItem("likedJobs", JSON.stringify(likedJobs))
-        console.log(localStorage.getItem("likedJobs"))
     }, [likedJobs]) 
 
     const addToLikedJobs = (job) => {
@@ -34,9 +32,9 @@ const JobsProvider = ({children}) => {
     const getFilteredJobs = () => {
         switch (filter) {
             case "popular":
-                return Jobs.filter((job) => job.likes > 100)
+                return Jobs.sort((jobA, jobB) => jobB.likes - jobA.likes).slice(0, 10)
             case "new":
-                return Jobs.filter((job) => job.date > 20260000)
+                return Jobs.sort((jobA, jobB) => jobB.date - jobA.date).slice(0, 10)
             case "browse-all":
                 return Jobs
             case "liked-jobs":

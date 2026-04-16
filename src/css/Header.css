@@ -10,6 +10,8 @@
 
     background-color: rgb(20, 18, 22);
     width: 100%;
+
+    z-index: 101;
 }
 
 .main-header {

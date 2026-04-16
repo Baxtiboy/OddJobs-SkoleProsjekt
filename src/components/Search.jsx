@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { useJobs } from "../context/JobsContext"
-import Jobs from "/public/jobsMetadata.json"
 import JobLink from "./JobLink"
 import "../css/Search.css"
 
@@ -18,7 +17,6 @@ const Search = () => {
 
     const handleSearch = (e) => {
         e.preventDefault()
-        console.log("sum happened")
         if (!searchQuery.trim()) return
     }
 

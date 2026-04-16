@@ -13,7 +13,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           {Jobs.map(job => {
-            console.log(job)
             return <Route path={`/jobs/${job.url}`} element={<JobPage {...job} key={job.id} />} />
           })}
         </Routes>

@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import { useState } from "react";
 
 import "../css/Header.css"
@@ -18,10 +18,10 @@ function Header() {
 
                     {isLoggedIn ? (
                         <section className="account-info">
-                            <Link className="nav-btn green" onClick={logIn}>
+                            <Link className="nav-btn green">
                                 Publish J*b
                             </Link>
-                            <Link className="nav-btn" onClick={logIn}>
+                            <Link className="nav-btn">
                                 Profile
                             </Link>
                         </section>
