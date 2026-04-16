@@ -1,51 +1,53 @@
+/* Jeg tar den største css filen (denne) og Header.css siden den har sånn media greie */
+
 .job-body {
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 0 1rem;
+    display: flex; /* bedre versjon av flex */
+    width: 100vw; /* bredden er 100% av bredden til nettsiden */
+    justify-content: center; /* måte å sentrere barna/children til elementen */
+    box-sizing: border-box; /* gjør at borderen ikke legger til bredde/høyde */
+    padding: 0 1rem; /* padding-top og bottom = 0, padding-left og right = 1rem. rem er en banger målenhet*/
 }
 
 .job-page {
-    margin-top: 1rem;
+    margin-top: 1rem; /* lager spacing for toppen av denne klassen */
     
     display: grid;
-    gap: 1rem;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 3fr 1fr;
-    grid-template-areas: 
-        "header header"
-        "main purchase"
-        "info purchase";
-
+    gap: 1rem; /* spacing mellomg hvert element i denne gridden */
+    grid-template-columns: 2fr 1fr; /* Dette er hva som gir grid aura. istedet for å skrive flex 1/2/3 i hvert individe element s kan du endre på bredden fra parenten (dette elementet) */
+    grid-template-rows: auto 1fr auto; /* samme bare et den effekter radene */
+    grid-template-areas: /* enda mer aura, fyf. lar deg lage kule matboks former. ja. Du ser det hvis du går inn på JobPage greia på nettsiden */
+        "header header" /* øverste raden. bare header*/
+        "main purchase" /* 2ndre rad  main på kolonne 1, purchase (burde egentlig hete noe annet) på den andre*/
+        "info info"; /* 3de rad  info på begge kolonnene*/ 
+    /* kolonne 1-2 */
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1100px;
-    align-self: center;
+    width: 100%; /* bredden er 100% av parenten */
+    max-width: 1100px; /* maks bredden er 1100px den overrider width greia over hvis bredden er nådd 1100px */
+    align-self: center; /* setter seg selv i midten */
 
-    height: clamp(600px, 88vh, 800px);
+    height: clamp(600px, 88vh, auto); /* clamp vil si clamp(<minimum>, <normal>, <maks>) auto er bare fyll inn så lite som mulig */
     
 }
 
 .main-container {
-    border-radius: 1.5rem;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-    padding: 1rem;
+    border-radius: 1.5rem; /* gjør kantene rundere */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* gir en border, som er 2px, tjukk solid stil, og så gjennomsiktig hvit farge */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); /* lager en skygge stilt i midten med 1rem i blur og gjennomsiktig svart i farge */
+    box-sizing: border-box; /*  */
+    padding: 1rem; /* lager ekstension av bakgrunnen til elementet på alle sider med 1rem */
 }
 
 .job-header {
-    grid-area: header;
+    grid-area: header; /* navn for den kule grid greia */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.2rem;
+    display: flex; /* flex er den mindre kule versjonen av grid */
+    justify-content: space-between; /* passer på at alle elementene har like mye spacing og de ytterste på hver side rører kantene */
+    align-items: center; /* sentrerer barna i midten på y-aksen*/
+    padding: 1rem 1.2rem; /* her er padding brukt fo å gjøre slik at kanten til elementet ikke er i kontant med barna sine */
 }
 .job-page-title {
     margin-left: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* endrer størrelse på tekst */
 }
 .switch-btn-container {
     display: flex;
@@ -60,36 +62,100 @@
 
     font-size: 1rem;
 
-    cursor: pointer;
-    transition: 0.2s;
+    cursor: pointer; /* gjør slik at når du hoverer over elmentet at musepekeren endrer til pointer stil */
+    transition: 0.2s; /* animasjoner har en transition tid på 0.2 sek */
 }
-.switch-btn:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.1);
+.switch-btn:hover { /* snakk om animasjoner, her er en som spiller av når musepekeren er over elementet */
+    transform: scale(1.05); /* enderer størrelse på elementet uten å ødelegge for posisjonering av andre elementer */
+    background-color: rgba(255, 255, 255, 0.1); /* endrer bakgrunnsfarge */
 }
-.switch-btn:active {
+.switch-btn:active { /* animasjon som spiller av når du trykker på elementet */
     transform: scale(0.95)
 }
-.switch-btn.active {
+.switch-btn.active /* dette er en dobbelt klasse, den endrer bare på elementer med begge klassene */{
     transform: scale(0.95);
     background-color: rgba(255, 255, 255, 0.1);
 
-    cursor: default;
+    cursor: default; /* gjør musepeker om til den vanlige som du er så vant til å se på*/
 }
 
 .job-main {
     grid-area: main;
 }
 
+.job-input-details {
+    display: grid;
+    row-gap: 5rem;
+}
+
+.job-input-details-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* gjør alt veldig flexibelt ved at gridden endrer på mengden elementer i en rad, basert på hvor mye plass den har */
+    gap: 2rem;
+}
+
+.job-application-filedrop-section {
+    display: grid;
+    place-items: center; /* plasserer barna i midten */
+}
+
+.job-application-filedrop {
+    display: grid;
+    row-gap: 8px; /* bare spacingen mellom radene */
+
+    padding: 4rem 5rem;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    margin-top: 3rem;
+    text-align: center; /* sentrerer tekst */
+}
+
+.job-application-filedrop-header {
+    font-size: 1.5rem;
+}
+
+.job-application-filedrop-options {
+    opacity: 0.7; /* hvor gjennomsiktig den er 1=vanlig 0=usynlig */
+}
+
+.job-application-filedrop-info {
+    opacity: 0.9;
+}
+
 .job-purchase {
     grid-area: purchase;
+    display: flex;
+    flex-direction: column; /* endrer på retningen til flex */
+    justify-content: space-between;
+    align-items: center; /* senterer elementene */
 }
+
 .job-purchase-img {
-    object-fit: cover;
+    object-fit: cover; /* bilde cropper og skalerer seg selv basert på strørrelse */
     width: 100%;
-    height: 30%;
+    height: 50%;
 
     border-radius: 12px;
+}
+
+.job-submit-btn {
+    min-width: 100%; /* minimum bredde */
+    padding: 1rem 0;
+    border-radius: 12px;
+    font-weight: 700; /* hvro tjukk teksten er */
+    font-size: 1rem;
+
+    background: linear-gradient(75deg, rgb(213, 237, 0), rgb(191, 255, 0)); /* øager en gradient som bakgrunnsfarge, veldig kult, ville anbefalt. */
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.386);
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+.job-submit-btn:hover {
+    transform: scale(1.02);
+}
+.job-submit-btn:active {
+    transform: scale(0.98)
 }
 
 
@@ -97,3 +163,5 @@
     grid-area: info;
     margin: 0;
 }
+
+/* tok ikke lang tid trust */

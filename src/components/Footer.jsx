@@ -9,3 +9,5 @@ const Footer = () => {
 }
 
 export default Footer
+
+// har ikke laget noe her

@@ -1,0 +1,23 @@
+.details-input-body
+
+.details-input-header {
+    font-size: small;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.details-input-input {
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    padding: 4px;
+
+    transition: 0.2s;
+}
+.details-input-input:focus {
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    padding: 4px;
+}

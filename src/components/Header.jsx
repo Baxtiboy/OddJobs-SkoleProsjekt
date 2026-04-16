@@ -1,3 +1,5 @@
+// ikke noe nytt her
+
 import { Link } from "react-router";
 import { useState } from "react";
 
@@ -18,10 +20,10 @@ function Header() {
 
                     {isLoggedIn ? (
                         <section className="account-info">
-                            <Link className="nav-btn green">
+                            <Link className="nav-btn green" onClick={logIn}>
                                 Publish J*b
                             </Link>
-                            <Link className="nav-btn">
+                            <Link className="nav-btn" onClick={logIn}>
                                 Profile
                             </Link>
                         </section>
